@@ -5,8 +5,8 @@ name: ArmorCode
 
 env:
   armorcodehost: https://app.armorcode.com
-  product: Mobile App - Andriod
-  subProduct: Android (3.2.55.6)
+  product: Mobile
+  subProduct: iOS Client (1.0)
   environment: Production
   token: aea7ddeb-9b2e-404f-b3d5-ef62dde148d9
   buildTool: GITHUB_ACTIONS
