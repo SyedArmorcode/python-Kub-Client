@@ -1,6 +1,3 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
 name: ArmorCode
 
 env:
@@ -8,7 +5,7 @@ env:
   product: Mobile
   subProduct: iOS Client (1.0)
   environment: Production
-  token: ff49f356-caa3-461d-ac69-eb16349262a8
+  token: aea7ddeb-9b2e-404f-b3d5-ef62dde148d9
   buildTool: GITHUB_ACTIONS
   buildNumber: ${{github.run_number}}
   end: 30
