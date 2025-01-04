@@ -8,7 +8,7 @@ env:
   product: Webgoat
   subProduct: FrontEnd
   environment: Production
-  token: aea7ddeb-9b2e-404f-b3d5-ef62dde148d9
+  token: 3116d3eb-e0e5-411a-b0b5-15d57997d8f8
   buildTool: GITHUB_ACTIONS
   buildNumber: ${{github.run_number}}
   end: 30
