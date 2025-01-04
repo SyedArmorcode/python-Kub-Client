@@ -6,7 +6,7 @@ name: ArmorCode
 env:
   armorcodehost: https://app.armorcode.com
   product: Webgoat
-  subProduct: FrontEnd
+  subProduct: API
   environment: Production
   token: 3116d3eb-e0e5-411a-b0b5-15d57997d8f8
   buildTool: GITHUB_ACTIONS
