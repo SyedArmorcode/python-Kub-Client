@@ -9,7 +9,7 @@ env:
   subProduct: API
   environment: Production
   token: 3116d3eb-e0e5-411a-b0b5-15d57997d8f8
-  buildTool: GITHUB_ACTIONS
+  buildTool: JENKINS
   buildNumber: ${{github.run_number}}
   end: 30
   
