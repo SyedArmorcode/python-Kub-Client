@@ -5,11 +5,11 @@ name: ArmorCode
 
 env:
   armorcodehost: https://app.armorcode.com
-  product: Mobile
-  subProduct: iOS Client (1.0)
+  product: Webgoat
+  subProduct: FrontEnd
   environment: Production
   token: aea7ddeb-9b2e-404f-b3d5-ef62dde148d9
-  buildTool: JENKINS
+  buildTool: GITHUB_ACTIONS
   buildNumber: ${{github.run_number}}
   end: 30
   
