@@ -1,13 +1,16 @@
+95645284-6d1c-4d7e-9769-f70e0c37a971
+
+
 name: ArmorCode
 
 env:
   armorcodehost: https://app.armorcode.com
-  product: Mobile
-  subProduct: iOS Client (1.0)
+  product: DVWA
+  subProduct: DVWAmono
   environment: Production
-  token: aea7ddeb-9b2e-404f-b3d5-ef62dde148d9
+  token: ${{secrets.ARMORCODE_TOKEN}}
   buildTool: GITHUB_ACTIONS
-  buildNumber: ${{github.run_number}}
+  buildNumber: 95645284-6d1c-4d7e-9769-f70e0c37a971
   end: 30
   
 on:
