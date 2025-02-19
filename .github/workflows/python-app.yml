@@ -9,7 +9,7 @@ env:
   subProduct: DVWAmono
   environment: Production
   token: 95645284-6d1c-4d7e-9769-f70e0c37a971
-  buildTool: GITHUB_ACTIONS
+  buildTool: JENKINS
   buildNumber: ${{github.run_number}}
   end: 30
   
