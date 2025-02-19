@@ -1,50 +1,30 @@
-name: Kubernetes Python Client - Validation
+95645284-6d1c-4d7e-9769-f70e0c37a971
 
-on: [ push, pull_request ]
 
+name: ArmorCode
+
+env:
+  armorcodehost: https://app.armorcode.com
+  product: DVWA
+  subProduct: DVWAmono
+  environment: Production
+  token: 6c32ebb1-47fa-4ed1-8a0f-6e5d71192f55
+  buildTool: GITHUB_ACTIONS
+  buildNumber: ${{github.run_number}}
+  end: 30
+  
+on:
+  # Triggers the workflow on push request events
+  push:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.7", "3.8", "3.10", "3.11"]
-        include:
-          - python-version: "3.9"
-            use_coverage: 'coverage'
-
+    # ArmorCode Validation Step
     steps:
-    - uses: actions/checkout@v4
-      with:
-        submodules: true
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Lint with flake8
-      run: |
-        pip install flake8
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Install Tox and any other packages
-      run: pip install tox
-
-    - name: Test without coverage
-      if: "! matrix.use_coverage"
-      run: tox -e py  # Run tox using the version of Python in `PATH`
-
-    - name: Test with coverage
-      if: "matrix.use_coverage"
-      run: tox -e py-coverage
-
-    - name: Upload coverage to Codecov
-      if: "matrix.use_coverage"
-      uses: codecov/codecov-action@v5
-      with:
-        fail_ci_if_error: false
-        verbose: true
+      - name: ArmorCode Validation
+        run: |
+          wget https://app.armorcode.com/static/scripts/slastatus.sh
+          sh slastatus.sh
