@@ -1,6 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
+
 name: ArmorCode
 
 env:
@@ -8,8 +9,8 @@ env:
   product: DVWA
   subProduct: DVWAmono
   environment: Production
-  token: 95645284-6d1c-4d7e-9769-f70e0c37a971
-  buildTool: JENKINS
+  token: 6c32ebb1-47fa-4ed1-8a0f-6e5d71192f55
+  buildTool: GITHUB_ACTIONS
   buildNumber: ${{github.run_number}}
   end: 30
   
